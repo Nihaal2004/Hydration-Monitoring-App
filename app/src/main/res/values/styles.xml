@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="CardView">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@color/card_background</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+    
+    <style name="LabelText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    
+    <style name="ValueText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

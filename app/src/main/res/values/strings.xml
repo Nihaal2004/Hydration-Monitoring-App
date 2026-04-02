@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hydration Monitor</string>
+    <string name="start">Start Monitoring</string>
+    <string name="stop">Stop Monitoring</string>
+    <string name="log_intake">Log Water Intake</string>
+    <string name="water_amount_hint">Amount (ml)</string>
+    
+    <string name="activity_label">Activity:</string>
+    <string name="variance_label">Variance:</string>
+    <string name="load_label">Cumulative Load:</string>
+    <string name="hydration_label">Hydration Level:</string>
+    <string name="last_drink_label">Last Drink:</string>
+    <string name="risk_label">Risk Level:</string>
+    <string name="suggestion_label">Suggested Intake:</string>
+    <string name="deadline_label">Deadline:</string>
+    
+    <string name="ml_unit">ml</string>
+    <string name="never">Never</string>
+    <string name="no_suggestion">—</string>
+    <string name="sensor_unavailable">Accelerometer not available</string>
+</resources>

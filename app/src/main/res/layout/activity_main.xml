@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Control Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="@string/start"
+                android:backgroundTint="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/stop"
+                android:enabled="false"
+                android:backgroundTint="@color/colorAccent" />
+        </LinearLayout>
+
+        <!-- Activity Status Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_label" />
+
+            <TextView
+                android:id="@+id/tvActivity"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IDLE" />
+        </LinearLayout>
+
+        <!-- Variance Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/variance_label" />
+
+            <TextView
+                android:id="@+id/tvVariance"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00" />
+        </LinearLayout>
+
+        <!-- Cumulative Load Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_label" />
+
+            <TextView
+                android:id="@+id/tvLoad"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00" />
+        </LinearLayout>
+
+        <!-- Hydration Level Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hydration_label" />
+
+            <TextView
+                android:id="@+id/tvHydration"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 ml" />
+        </LinearLayout>
+
+        <!-- Last Drink Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_drink_label" />
+
+            <TextView
+                android:id="@+id/tvLastDrink"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/never" />
+        </LinearLayout>
+
+        <!-- Risk Level Card -->
+        <LinearLayout
+            android:id="@+id/cardRisk"
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/risk_label" />
+
+            <TextView
+                android:id="@+id/tvRisk"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NORMAL"
+                android:textColor="@color/risk_normal" />
+        </LinearLayout>
+
+        <!-- Suggested Intake Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/suggestion_label" />
+
+            <TextView
+                android:id="@+id/tvSuggestion"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_suggestion" />
+        </LinearLayout>
+
+        <!-- Deadline Card -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deadline_label" />
+
+            <TextView
+                android:id="@+id/tvDeadline"
+                style="@style/ValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_suggestion" />
+        </LinearLayout>
+
+        <!-- Water Intake Input -->
+        <LinearLayout
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Water Intake"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark" />
+
+            <EditText
+                android:id="@+id/etWaterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/water_amount_hint"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnLogIntake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/log_intake"
+                android:backgroundTint="@color/risk_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
